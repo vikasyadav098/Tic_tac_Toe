@@ -1,0 +1,118 @@
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1f2933, #111827);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.heading{
+    color:gainsboro;
+}
+.container {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.game {
+  height: 60vmin;
+  width: 60vmin;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2vmin;
+  background: #0f172a;
+  padding: 1.2vmin;
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+.box {
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+  background: linear-gradient(145deg, #f472b6, #ec4899);
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2), 0 8px 20px rgba(0, 0, 0, 0.4);
+  font-size: 8vmin;
+  font-weight: 700;
+  color: #0f172a;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.box:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+}
+.box:disabled {
+  cursor: not-allowed;
+  opacity: 0.9;
+}
+.box:contains("X") {
+  color: #22d3ee;
+}
+.box:contains("O") {
+  color: #fde047;
+} 
+#reset-btn,
+#new-btn {
+  margin: 1rem 0.5rem;
+  padding: 0.8rem 1.8rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: #0f172a;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(14, 165, 233, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+#footer{
+    color:gray;
+    font-size: 0.8rem;
+}
+#footer:hover{
+    color:white;
+    
+}
+#reset-btn:hover,
+#new-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(14, 165, 233, 0.7);
+}
+.msg-container {
+  height: 30vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#msg {
+  color: #facc15;
+  font-size: 6vmin;
+  font-weight: 700;
+  animation: pop 0.5s ease;
+}
+@keyframes pop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.win {
+  background: linear-gradient(145deg, #4ade80, #22c55e) ;
+  color: #064e3b !important;
+  box-shadow: 0 0 25px rgba(34, 197, 94, 0.9);
+}
+.hide {
+  display: none;
+};
