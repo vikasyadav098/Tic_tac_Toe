@@ -5,7 +5,7 @@ The project focuses on strengthening core JavaScript logic, DOM manipulation, an
 
 🔹 Features:
 
-Clean and responsive UI using CSS
+Clean and responsive UI using CSS 
 
 Interactive gameplay powered by JavaScript
 
